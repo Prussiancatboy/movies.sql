@@ -1,0 +1,46 @@
+body {
+  background: #F5F5F0;
+  color: black;
+  font-family: Monaco;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.forms {
+  margin-top: 10px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forms input[type="text"],
+.forms input[type="number"],
+.forms input[type="submit"] {
+  border-radius: 25px;
+  padding: 5px 10px;
+}
+
+.list-movies-title {
+  padding: 10px 0;
+  background: #009B50;
+  color: white;
+  text-align: center;
+  font-size: 16pt;
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 25px;
+}
+
+.list-users {
+  padding: 10px;
+  background: #8b8b8b;
+  color: white;
+  text-align: center;
+  font-size: 16pt;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 25px;
+
+}

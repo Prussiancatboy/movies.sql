@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Movie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='promptstyle.css') }}">
+</head>
+<body>
+    <h1 class="list-movies-title">Add Movie</h1>
+    <form action="{{ url_for('add_movie', user_id=user_id) }}" method="post" class="forms">
+        <label for="movie_title">Movie Title:</label>
+        <input type="text" id="movie_title" name="movie_title" required><br>
+        <input type="submit" value="Add Movie">
+    </form>
+</body>
+</html>

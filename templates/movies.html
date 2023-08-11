@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movies</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1 class="list-movies-title">***** Movies *****</h1>
+    <ul class="movie-grid">
+        {% for movie in movies %}
+            <li class="movie">
+                <img src="{{ movie['poster'] }}" alt="{{ movie['name'] }}" class="movie-poster">
+                <h2 class="movie-title">{{ movie['name'] }}</h2>
+                <p class="movie-info">Director: {{ movie['director'] }}</p>
+                <p class="movie-info">Rating: {{ movie['rating'] }}</p>
+                <p class="movie-info">Year: {{ movie['year'] }}</p>
+                <form action="{{ url_for('update_movie', user_id=user_id, movie_id=movie['id']) }}" method="GET">
+                    <input type="submit" value="Update" class="movie-button" />
+                </form>
+                <form action="{{ url_for('delete_movie', user_id=user_id, movie_id=movie['id']) }}" method="GET">
+                    <input type="submit" value="Delete" class="movie-button" />
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <form action="{{ url_for('add_movie', user_id=user_id) }}" method="GET">
+        <input type="submit" value="Add Movie" class="add-movie-button" />
+    </form>
+</body>
+</html>
+

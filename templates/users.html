@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users - MovieWeb App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='promptstyle.css') }}">
+</head>
+<body>
+    <h1 class="list-movies-title">Users</h1>
+    <div class="list-users">
+        {% for user in users %}
+        <div>
+            <a href="/users/{{ user.id }}" class="user-link rounded-button">{{ user.name }}</a>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="{{ url_for('add_user') }}" class="add-user-button">Add User</a>
+</body>
+</html>
+
